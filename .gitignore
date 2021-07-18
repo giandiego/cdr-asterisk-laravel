@@ -1,13 +1,37 @@
+# Laravel gitignore
 /node_modules
 /public/hot
 /public/storage
 /storage/*.key
+/storage/tmp
 /vendor
-.env
-.env.backup
-.phpunit.result.cache
-docker-compose.override.yml
+/.idea
+/.vagrant
 Homestead.json
 Homestead.yaml
 npm-debug.log
+.env
+
+# Larave IDE Helper
+_ide_helper.php
+_ide_helper_models.php
+.phpstorm.meta.php
+
+# misc
+.DS_Store
+reports/*
+!reports/.gitkeep
 yarn-error.log
+.phpunit.result.cache
+/user-customizations.sh
+/postgres_backup
+/mysqldump.sql.gz
+/mysql_backup
+/aliases
+/after.sh
+/Homestead.yaml
+/Homestead.json/.idea
+phpunit.xml
+.buildpath
+.settings
+.project
