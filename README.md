@@ -20,6 +20,15 @@ yum -y install MariaDB-server MariaDB-client
 systemctl enable --now mariadb
 ```
 
+`Posiblemente tengamos problemas con asterisk, realizar lo siguiente para solucionar el conectar con mariadb`
+
+```bash
+yum remove mysql-connector-odbc
+wget http://repo.mysql.com/yum/mysql-connectors-community/el/7/x86_64//mysql-connector-odbc-8.0.15-1.el7.x86_64.rpm
+yum localinstall --nogpgcheck mysql-connector-odbc-8.0.15-1.el7.x86_64.rpm
+vim /etc/odbcinst.ini
+isql asterisk root aulautil
+```
 
 Instalamos dependencias: php y composer.
 
@@ -62,7 +71,7 @@ Ingresar por web con los datos: admin@admin.com - password
 
 ```bash
 git add .
-commit -m "fix tittle"
+git commit -m "fix tittle"
 git push
 ```
 #Obtener los cambios en producción
