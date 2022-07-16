@@ -3,7 +3,10 @@
 
 <div class="card">
     <div class="card-header">
-        {{ trans('global.list') }} {{ trans('cruds.cdr.title_singular') }}
+       {{-- {{ trans('global.list') }} {{ trans('cruds.cdr.title_singular') }}--}}
+        <h4>
+            Registro de llamadas - CDR
+        </h4>
     </div>
 
     <div class="card-body">
